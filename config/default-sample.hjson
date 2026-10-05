@@ -25,7 +25,7 @@
       // un_base::vectortile::unmap_phyp_p
       un_base::vectortile::unmap_popp_p
     ]
-    mbtilesDir: un-s-tile
+    pmtilesDir: un-s-tile
     conversionTilelist: [
       0-0-0
     ]
@@ -35,7 +35,7 @@
     relations: [
       osm_planet::vectortile::roads_major_0408_l 
     ]
-    mbtilesDir: osm-s-tile
+    pmtilesDir: osm-s-tile
     conversionTilelist: [
       0-0-0
     ]
@@ -78,7 +78,7 @@
       un_base::vectortile::unmap_popp_p
       // un_base::vectortile::custom_planet_coastline_l
     ]
-    mbtilesDir: mbtiles/un_tile
+    pmtilesDir: pmtiles/un_tile
   }
   osm-l: {
     host: localhost
@@ -122,14 +122,14 @@
       osm_planet::vectortile::waterways_small_l
       osm_planet::vectortile::buildings_a   
     ]
-    mbtilesDir_every: mbtiles/osm_tile_every
-    mbtilesDir_day01: mbtiles/osm_tile_day01
-    mbtilesDir_day02: mbtiles/osm_tile_day02
-    mbtilesDir_day03: mbtiles/osm_tile_day03
-    mbtilesDir_day04: mbtiles/osm_tile_day04
-    mbtilesDir_day05: mbtiles/osm_tile_day05
-    mbtilesDir_day06: mbtiles/osm_tile_day06
-    mbtilesDir_day07: mbtiles/osm_tile_day07
+    pmtilesDir_every: pmtiles/osm_tile_every
+    pmtilesDir_day01: pmtiles/osm_tile_day01
+    pmtilesDir_day02: pmtiles/osm_tile_day02
+    pmtilesDir_day03: pmtiles/osm_tile_day03
+    pmtilesDir_day04: pmtiles/osm_tile_day04
+    pmtilesDir_day05: pmtiles/osm_tile_day05
+    pmtilesDir_day06: pmtiles/osm_tile_day06
+    pmtilesDir_day07: pmtiles/osm_tile_day07
   }
   everydayTilelist: [
     5-14-13

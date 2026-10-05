@@ -19,7 +19,7 @@ const Z = config.get('osm-s.Z');
 const dbUser = config.get('osm-l.dbUser');
 const dbPassword = config.get('osm-l.dbPassword');
 const relations = config.get('osm-s.relations');
-const mbtilesDir = config.get('osm-s.mbtilesDir');
+const pmtilesDir = config.get('osm-s.pmtilesDir');
 const logDir = config.get('logDir');
 const conversionTilelist = config.get('osm-s.conversionTilelist');
 const spinnerString = config.get('spinnerString');
@@ -192,8 +192,8 @@ const queue = new Queue(
     task._attempt = (task._attempt || 0) + 1;
     const [z, x, y] = moduleKey.split('-').map(v => Number(v));
     const bbox = tilebelt.tileToBBOX([x, y, z]);
-    const tmpPath = `${__dirname}/${mbtilesDir}/part-${moduleKey}.mbtiles`;
-    const dstPath = `${__dirname}/${mbtilesDir}/${moduleKey}.mbtiles`;
+    const tmpPath = `${__dirname}/${pmtilesDir}/part-${moduleKey}.pmtiles`;
+    const dstPath = `${__dirname}/${pmtilesDir}/${moduleKey}.pmtiles`;
 
     moduleKeysInProgress.push(moduleKey);
     productionSpinner.setSpinnerTitle(moduleKeysInProgress.join(', '));
@@ -272,7 +272,7 @@ const queueTasks = () => {
   let i = 1;
   for (const moduleKey of conversionTilelist) {
     // calculate current file size
-    const path = `${__dirname}/${mbtilesDir}/${moduleKey}.mbtiles`;
+    const path = `${__dirname}/${pmtilesDir}/${moduleKey}.pmtiles`;
     let size = 0;
     if (fs.existsSync(path)) {
       const stat = fs.statSync(path);

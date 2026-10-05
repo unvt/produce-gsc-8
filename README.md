@@ -1,4 +1,4 @@
-# produce-gsc-7
+# produce-gsc-8
 
 production package for UNGSC
 
@@ -9,16 +9,16 @@ MaxZoom is 15
 # Install
 
 ```
-git clone https://github.com/unvt/produce-gsc-7
-cd produce-gsc-7
+git clone https://github.com/unvt/produce-gsc-8
+cd produce-gsc-8
 npm install
 ```
 
 Run followings when necessary
 
 ```
-sudo chown -R hoge:hoge produce-gsc-7
-sudo chmod produce-gsc-7/777 work*.sh
+sudo chown -R hoge:hoge produce-gsc-8
+sudo chmod produce-gsc-8/777 work*.sh
 ```
 
 # Run
