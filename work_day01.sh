@@ -1,3 +1,4 @@
 node produce-gsc-osm/index_day01.js
 for f in produce-gsc-osm/pmtiles/osm_tile_day01/*.pmtiles; do /usr/local/bin/tile-join --no-tile-size-limit -f -o large_tiles/unosm/tile_day01/`basename ${f}` produce-gsc-un/pmtiles/un_tile/`basename ${f}` produce-gsc-osm/pmtiles/osm_tile_day01/`basename ${f}`; date; echo  `basename ${f}`; ls -alh large_tiles/unosm/tile_day01/`basename ${f}` ;done
 scp -i XXX(path to your ssh key) -r ./large_tiles/unosm/tile_day01/* (username)@(hostingserver):(path)/pmtiles/unosm
+ssh -i XXX(path to your ssh key) (username)@(hostingserver):(path)/restart-coe.sh
